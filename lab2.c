@@ -1,16 +1,15 @@
 #include<stdio.h>
-float area(int);
+float area(float);
 int main()
 {
-	int r;
-	float ar;
+	float r,ar;
 	printf("enter radius of he circle:\n");
-	scanf("%d",&r);
+	scanf("%f",&r);
 	ar=area(r);
 	printf("area of circle:%f",ar);
 	return 0;
 }
-float area(int rad)
+float area(float rad)
 {
 	float a;
 	a=3.14*rad*rad;
