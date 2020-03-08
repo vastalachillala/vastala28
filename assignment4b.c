@@ -6,11 +6,11 @@ int main()
     scanf("%d",&n);
     if(n>=18)
     {
-        printf("\n person is eligible");
+        printf("\n eligible to vote");
     }
     else
     {
-        printf("\n person is not eligible");
+        printf("\n not eligible to vote");
     }
     return 0;
 }
