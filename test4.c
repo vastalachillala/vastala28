@@ -6,8 +6,8 @@ int main()
 {
 	int in,out,com;
 	in=input();
-	com=compute(int in);
-	out=output(int com);
+	com=compute(in);
+	out=output(com);
 	return 0;
 }
 void input()
