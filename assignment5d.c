@@ -71,16 +71,15 @@
     int main()
 {
     int i,j;
+    for(i=1; i<=5; i++) 
     {
-        for(i=1; i<=5; i++) 
+        for(j=1; j<=i; j++) 
         {
-            for(j=1; j<=i; j++) 
-            {
-                printf("%d", i);
-            }
-            printf("\n");
+            printf("%d", i);
         }
-        return 0;
+        printf("\n");
+    }
+    return 0;
 }
 
 
@@ -88,14 +87,14 @@
     #include <stdio.h>
     int main() 
 {
-        int i, j;
-        for (i=1;i<=3;i++) 
+    int i, j;
+    for (i=1;i<=3;i++) 
+    {
+        printf("\n");
+        for (j=1;j<=3;j++) 
         {
-            printf("\n");
-            for (j=1;j<=3;j++) 
-            {
-                printf(" %c",'A'-1 + i);
-            }
+            printf(" %c",'A'-1 + i);
         }
-        return 0;
+    }
+    return 0;
 }
