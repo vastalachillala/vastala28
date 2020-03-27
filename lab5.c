@@ -13,6 +13,6 @@ int main()
 		sum=sum+ar[i];
 	}
 	avg=sum/n;
-	printf("\n avegrage =%f",avg);
+	printf("\n average =%f",avg);
 	return 0;
 }
