@@ -1,29 +1,42 @@
 #include<stdio.h>
-int main()
+int i,j;
+void input(int marks[5][3])
 {
-	int m[2][5],i,j,k;
-	float sum=0;
 	for(i=0;i<5;i++)
 	{
-		printf("\n enter the sub %d marks of each sub:",i+1);
-		for(j=0;j<2;j++)
+		for(j=0;j<3;j++)
 		{
-			scanf("%d",&m[j][i]);
+			printf("Enter marks of student %d in each subject:",i+1);
+			scanf("%d",&marks[i][j]);
 		}
+		printf("\n");
 	}
-	for(k=0;k<3;k++)
+}
+int compute(int marks[5][3])
+{
+	int large=marks[0][j];
+	for(i=0;i<5;i++)
 	{
-		for(i=0;i<5;i++)
+		if(marks[i][j]>large)
 		{
-			for(j=0;j<2;j++)
-			{
-				sum=sum+m[j][i];
-			}
-
-			printf("\n avg marks in sub %d is %f",i+1,sum/2);
-			sum=0;
+			large=marks[i][j];
 		}
 	}
-	printf("\n");
+	return large;
+}
+void output(int j, int large)
+{
+	printf("The highest score in subject %d is %d\n",j+1,large);
+}
+int main()
+{
+	int marks[5][3];
+	input(marks);
+	int large;
+	for(j=0;j<3;j++)
+	{
+		large=compute(marks);
+		output(j,large);
+	}
 	return 0;
 }
