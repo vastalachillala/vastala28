@@ -15,6 +15,6 @@ int main()
 		}
 		i++;
 	}
-	printf("%s",str);
+	printf("\n string after converting: %s",str);
 	return 0;
 }
