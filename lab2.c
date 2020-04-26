@@ -1,17 +1,30 @@
 #include<stdio.h>
-float area(float);
+float input();
+float compute(float);
+void output(float,float);
 int main()
 {
-	float r,ar;
-	printf("enter radius of he circle:\n");
-	scanf("%f",&r);
-	ar=area(r);
-	printf("area of circle:%f",ar);
-	return 0;
+    float in,com;
+    in=input();
+    com=compute(in);
+    output(in,com);
+    return 0;
 }
-float area(float rad)
+float input()
 {
-	float a;
-	a=3.14*rad*rad;
-	return a;
+    float r;
+    printf("\n enter the radius of the circle:");
+    scanf("%f",&r);
+    return r;
+}
+float compute(float r)
+{
+    float ar;
+    ar=3.14*r*r;
+    return ar;
+}
+void output(float r,float ar)
+{
+    printf("\n area of circle of radius %0.2f is %0.2f",r,ar);
+    printf("\n");
 }
