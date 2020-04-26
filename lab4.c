@@ -1,27 +1,32 @@
 #include<stdio.h>
-int input();
-int compute(int);
+void input(int *n)
+{
+    printf("\n enter n:");
+    scanf("%d",&*n);
+}
+void compute(int n,int ar[100])
+{
+    int i;
+    for(i=1;i<=100;i++)
+    {
+        ar[i]=i*n;
+    }
+}
+void output(int n,int ar[100])
+{
+    int i;
+    printf("\n the multiples of %d is:\n",n);
+    for(i=1;i<=100;i++)
+    {
+        printf("%d * %d = %d \n",n,i,ar[i]);
+        printf("\n");
+    }
+}
 int main()
 {
-	int in;
-	in=input();
-	compute(in);
-	return 0;
-}
-int input()
-{
-	int n;
-	printf("\n enter n:");
-	scanf("%d",&n);
-	return n;
-}
-int compute(int n)
-{
-	int a,i;
-	for(i=0;i<=100;i++)
-	{
-		a=i*n;
-		printf("\n %d \n",a);
-	}
-	return a;
+    int n,ar[100];
+    input(&n);
+    compute(n,ar);
+    output(n,ar);
+    return 0;
 }
